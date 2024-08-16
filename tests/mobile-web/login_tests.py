@@ -19,9 +19,8 @@ def test_saucedemo_login(setup):
     username_input.send_keys("standard_user") 
 
     password_input = driver.find_element(By.ID, "password")
-    password_input.send_keys("secret_sauce")  # Replace "your_password" with the actual password
+    password_input.send_keys("secret_sauce") 
 
-    # Optionally, click the login button
     login_button = driver.find_element(By.ID, "login-button")
     login_button.click()
 
@@ -42,7 +41,6 @@ def test_incorrect_credentials(setup):
 
     error_message = driver.find_element(By.CSS_SELECTOR, "[data-test='error']")
     
-    # Assert the error message text
     assert error_message.text == "Epic sadface: Username and password do not match any user in this service"
     assert driver.current_url == URL
 

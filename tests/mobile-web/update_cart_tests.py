@@ -14,7 +14,7 @@ def test_add_item_to_cart(setup, login):
 
     assert cart_badge.text == "1"
 
-def test_remove_item_from_cart(setup, login, ):
+def test_remove_item_from_cart(setup, login):
     driver = setup
     login
 
