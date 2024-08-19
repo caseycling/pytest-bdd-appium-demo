@@ -1,9 +1,10 @@
 from selenium import webdriver
+from os import environ
+
 import pytest
 from pytest_bdd import scenarios, given, when, then
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options as ChromeOptions
-
 
 # Load the scenarios from the feature file
 scenarios('shopping_cart.feature')
@@ -14,8 +15,8 @@ def setup():
     options.browser_version = 'latest'
     options.platform_name = 'Windows 11'
     sauce_options = {}
-    sauce_options['username'] = 'caseyclinga1'
-    sauce_options['accessKey'] = '45be69a0-2e06-493d-8731-f0d605b4044d'
+    sauce_options['username'] = environ['SAUCE_USERNAME']
+    sauce_options['accessKey'] = environ['SAUCE_ACCESS_KEY']
     sauce_options['build'] = 'pytest-appium-demo'
     sauce_options['name'] = 'Pytest-bdd'
     options.set_capability('sauce:options', sauce_options)
