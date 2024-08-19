@@ -16,8 +16,8 @@ def setup():
     sauce_options = {}
     sauce_options['username'] = 'caseyclinga1'
     sauce_options['accessKey'] = '45be69a0-2e06-493d-8731-f0d605b4044d'
-    sauce_options['build'] = '<your build id>'
-    sauce_options['name'] = '<your test name>'
+    sauce_options['build'] = 'pytest-appium-demo'
+    sauce_options['name'] = 'Pytest-bdd'
     options.set_capability('sauce:options', sauce_options)
 
     url = "https://ondemand.us-west-1.saucelabs.com:443/wd/hub"
