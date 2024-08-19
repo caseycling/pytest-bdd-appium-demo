@@ -9,11 +9,26 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 
 import time
 
-@pytest.fixture(scope="function")
-def setup():
-    driver = webdriver.Chrome()
-    yield driver
-    driver.quit()
+# @pytest.fixture(scope="function")
+# def setup():
+#     options = ChromeOptions()
+#     options.browser_version = 'latest'
+#     options.platform_name = 'Windows 11'
+#     sauce_options = {}
+#     sauce_options['username'] = environ['SAUCE_USERNAME']
+#     sauce_options['accessKey'] = environ['SAUCE_ACCESS_KEY']
+#     sauce_options['build'] = 'Mobile web tests'
+#     sauce_options['name'] = 'Example test'
+#     options.set_capability('sauce:options', sauce_options)
+
+#     url = "https://ondemand.us-west-1.saucelabs.com:443/wd/hub"
+#     driver = webdriver.Remote(command_executor=url, options=options)
+
+#     # run commands and assertions
+#     yield driver
+#     # end the session
+#     driver.execute_script("sauce:job-result=" + jobStatus)
+#     driver.quit()
 
 @pytest.fixture(scope="function")
 def login(setup):
@@ -37,7 +52,7 @@ def android_rdc_driver():
     sauce_options = {}
     sauce_options['username'] = environ['SAUCE_USERNAME']
     sauce_options['accessKey'] = environ['SAUCE_ACCESS_KEY']
-    sauce_options['build'] = '<your build id>'
+    sauce_options['build'] = 'Native mobile android'
     sauce_options['name'] = 'pytest-bdd test'
     options.set_capability('appium:app', 'storage:filename=SauceLabs-Demo-App.apk')
     options.set_capability('sauce:options', sauce_options)
@@ -51,7 +66,7 @@ def android_rdc_driver():
     yield driver
     # end the session
     driver.quit() 
-
+    
 # @pytest.fixture(scope="function")
 # def android_rdc_driver():
 #     options = UiAutomator2Options()

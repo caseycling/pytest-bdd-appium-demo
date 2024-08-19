@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7bab8c4e8e7f8605f1d72bdade43958816617312327f47b88133ab21ba6b59bf"
+            "sha256": "3f029461928bbd03936f49d0b9a74ba5be2d0eb54fd7163b8a03a457ea3d17e7"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -18,10 +18,10 @@
     "default": {
         "appium-python-client": {
             "hashes": [
-                "sha256:92fd6c043910c49ad98ea3914020c723edf297b5d7847015989e47ea9386e5f0"
+                "sha256:f1f6fe9a039e13ed6ccffe21babe1c8897937f1f42a52052a8c1cbc019bb65cc"
             ],
             "index": "pypi",
-            "version": "==4.0.1"
+            "version": "==4.1.0"
         },
         "attrs": {
             "hashes": [
@@ -38,6 +38,14 @@
             ],
             "markers": "python_version >= '3.6'",
             "version": "==2024.7.4"
+        },
+        "execnet": {
+            "hashes": [
+                "sha256:26dee51f1b80cebd6d0ca8e74dd8745419761d3bef34163928cbebbdc4749fdc",
+                "sha256:5189b52c6121c24feae288166ab41b32549c7e2348652736540b9e6e7d4e72e3"
+            ],
+            "markers": "python_version >= '3.8'",
+            "version": "==2.1.1"
         },
         "h11": {
             "hashes": [
@@ -202,6 +210,15 @@
             "markers": "python_version >= '3.8'",
             "version": "==7.2.0"
         },
+        "pytest-xdist": {
+            "hashes": [
+                "sha256:9ed4adfb68a016610848639bb7e02c9352d5d9f03d04809919e2dafc3be4cca7",
+                "sha256:ead156a4db231eec769737f57668ef58a2084a34b2e55c4a8fa20d861107300d"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.8'",
+            "version": "==3.6.1"
+        },
         "selenium": {
             "hashes": [
                 "sha256:128d099e66284437e7128d2279176ec7a06e6ec7426e167f5d34987166bd8f46",
@@ -236,11 +253,11 @@
         },
         "trio": {
             "hashes": [
-                "sha256:6d2fe7ee656146d598ec75128ff4a2386576801b42b691f4a91cc2c18508544a",
-                "sha256:998bbdc5797621e1976c86820b1bc341cc66b51d2618a31cc8720ddd7df8affe"
+                "sha256:0346c3852c15e5c7d40ea15972c4805689ef2cb8b5206f794c9c19450119f3a4",
+                "sha256:c5237e8133eb0a1d72f09a971a55c28ebe69e351c783fc64bc37db8db8bbe1d0"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==0.26.1"
+            "version": "==0.26.2"
         },
         "trio-websocket": {
             "hashes": [
