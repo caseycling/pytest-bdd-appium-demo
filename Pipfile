@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 pytest-bdd = "*"
 pytest = "*"
-appium-python-client = "*"
+appium-python-client = "4.1.0"
 selenium = "*"
 pytest-xdist = "*"
 
