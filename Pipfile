@@ -14,3 +14,9 @@ pytest-xdist = "*"
 
 [requires]
 python_version = "3.12"
+
+[scripts]
+mobile-web = "pipenv run pytest -n5 tests/mobile-web"
+native-app = "pipenv run pytest -n8 tests/native-app"
+native-app-android = "pipenv run pytest tests/native-app/android"
+native-app-iOs = "pipend run pytest -n3 tests/native-app/iOS"
