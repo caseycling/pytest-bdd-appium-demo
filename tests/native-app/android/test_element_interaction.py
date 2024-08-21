@@ -1,4 +1,3 @@
-import pytest
 from pytest_bdd import scenarios, given, when, then
 from selenium.webdriver.common.by import By
 
