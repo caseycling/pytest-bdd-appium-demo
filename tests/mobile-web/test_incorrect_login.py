@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 URL = "https://www.saucedemo.com/"
 
 # Scenarios
-scenarios('../features/login.feature')
+scenarios('../features/incorrect_login.feature')
 
 @given("I open the SauceDemo site")
 def open_site(mobile_web_driver):
