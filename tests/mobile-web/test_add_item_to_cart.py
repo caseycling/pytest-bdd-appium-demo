@@ -5,8 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 
 # Load the scenarios from the feature file
-scenarios('../features/shopping_cart.feature')
-
+scenarios('../features/add_to_cart.feature')
 @given("I am logged in")
 def login(mobile_web_driver):
     driver = mobile_web_driver
