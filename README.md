@@ -1,5 +1,5 @@
 # Project Overview
-This is an example repo of mobile-web tests and native mobile app tests for Android and iOs using Python with pytest-BDD and Appium via [Sauce Labs](https://saucelabs.com/) infrastructure on [SauceDemo.com](https://www.saucedemo.com/).
+This is an example repo of mobile-web tests and native mobile app tests for Android and iOs using Python with pytest-BDD and Appium via a sauce labs account on [Sauce Labs](https://saucelabs.com/) infrastructure through [SauceDemo.com](https://www.saucedemo.com/).
 
 # Getting Started
 1. Clone the repository from github `[https://github.com/caseycling/pytest-bdd-appium-demo.git`
