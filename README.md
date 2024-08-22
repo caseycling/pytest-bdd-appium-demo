@@ -20,16 +20,36 @@ On macOS/Linux:
 
 Create a requirements.txt file with the following content:
 
-`python_version==3.12`
-`pytest-bdd`
-`pytest`
-`appium-python-client==4.1.0`
-`selenium`
-`pytest-xdist`
+``` 
+python_version==3.12
+pytest
+pytest-bdd
+pytest-xdist
+appium-python-client==4.1.0
+selenium
+```
 
 Then, install the dependencies using:
 
 `pip install -r requirements.txt`
+
+To install individual packages needed simply use:
+
+`pip install pytest-xdist` or `pip install pytest`
+
+## Running the Tests
+
+You can start individual non parallel tests by using .ex `pipenv run pytest tests/mobile-web/test_add_item_to_cart.py`
+
+or you can use the parallel [scripts] found in the Pipfile:
+
+```
+mobile-web = "pipenv run pytest -n5 tests/mobile-web"
+native-app = "pipenv run pytest -n8 tests/native-app"
+native-app-android = "pipenv run pytest tests/native-app/android"
+native-app-iOs = "pipenv run pytest -n3 tests/native-app/iOS"
+```
+
 
 
 ## Sauce Documentation & Resources 📚
