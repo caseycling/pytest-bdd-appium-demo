@@ -4,37 +4,11 @@ This is an example repo of mobile-web tests and native mobile app tests for Andr
 # Getting Started
 1. Clone the repository `git clone https://github.com/caseycling/pytest-bdd-appium-demo.git`
 2. Go to into the repository `cd pytest-bdd-appium-demo`
-3. `pipenv install`
+3. Install the dependencies `pipenv install`
 
 ## Installation:
 
 Ensure you have Python 3.12 installed. You can download it from the [official Python website](https://www.python.org/downloads/)
-
-## Install the required packages:
-
-Create a requirements.txt file with the following content:
-
-``` 
-python_version==3.12
-pytest
-pytest-bdd
-pytest-xdist
-appium-python-client==4.1.0
-selenium
-```
-
-Then, install the dependencies using:
-
-`pip install -r requirements.txt`
-
-To install individual packages instead of using .txt file, simply use:
-
-`pip install pytest-xdist` or `pip install pytest` etc...
-
-Verify the installation of packages (optional):
-
-`pip list`
-
 
 ## Instructions on setting up environment variables
 If you have these saved as "environment variables" on your local machine, utilizing the logic in our project will work. If not, you can create a .env file and store them there also.
@@ -52,11 +26,30 @@ If you have these saved as "environment variables" on your local machine, utiliz
     - **`android/`**: Contains tests and step definitions specific to Android native apps.
     - **`iOS/`**: Contains tests and step definitions specific to iOS native apps.
 
+## Driver Setup in `conftest.py`
+
+The conftest.py file in this project is configured to manage the setup and teardown of WebDriver sessions for different platforms, ensuring that the tests run smoothly on Sauce Labs infrastructure. Here's an overview of the drivers set up:
+
+**1. Mobile Web Driver**
+The mobile_web_driver fixture is responsible for setting up the WebDriver session for running mobile web tests. It uses Selenium's webdriver.Remote to interact with a mobile web browser hosted on Sauce Labs.
+
+**2. Android RDC Driver**
+The android_rdc_driver fixture sets up a session for running tests on native Android applications using Appium. It leverages Appium's UiAutomator2Options to interact with the Android device.
+
+**3. iOS RDC Driver**
+The ios_driver fixture manages the setup for running tests on native iOS applications. It uses Appium's AppiumOptions to configure the session.
+
+**General workflow**
+Each driver fixture yields a WebDriver session, allowing the test to interact with the respective platform. 
+After the test execution, the driver session is terminated (driver.quit()), ensuring that resources are released properly. 
+
+For more information on how to customize these settings to accomodate your usecase, please reference the platform configurator documenation listed at the bottom of this doc.
+
 ### How `pytest-bdd` Runs in Parallel
 
-1. **Feature Files**: Located in the `features/` directory, these files describe scenarios and steps that need to be tested.
+1. **Feature Files**: These files describe scenarios and steps that need to be tested.
 
-2. **Step Definitions**: These are Python functions that implement the steps described in the feature files. They are usually placed in the corresponding test directories under `tests/`, such as `mobile-web/`, `native-app/android/`, and `native-app/iOS/`.
+2. **Step Definitions**: Python functions that implement the steps described in the feature files. These are usually placed in the corresponding test directories under `tests/`, such as `mobile-web/`, `native-app/android/`, and `native-app/iOS/`.
 
 3. **Test Files**: These files include the test logic and use the step definitions to execute the scenarios. They are found in the same directories as step definitions or in a subdirectory as needed.
 
@@ -65,8 +58,6 @@ If you have these saved as "environment variables" on your local machine, utiliz
 - **Pytest-Xdist Integration**: `pytest-bdd` works with `pytest-xdist` to run tests in parallel. The `pytest-xdist` plugin distributes test execution across multiple CPUs or machines, improving performance for large test suites.
 
 - **Running Tests**: When `pytest` is executed with the `-n` option (e.g., `pytest -n auto`), `pytest-xdist` automatically runs tests in parallel. It recognizes the test files and steps definitions across the `tests/` directories and handles parallel execution efficiently.
-
-This structure ensures a clean separation between different types of tests and platforms while enabling parallel test execution to optimize testing efficiency.
 
 # Running the Tests
 
