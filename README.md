@@ -1,3 +1,6 @@
+#Project Overview
+This is an example repo of mobile-web tests and native mobile app tests for Android and iOs using Python with pytest-BDD and Appium via [Sauce Labs](https://saucelabs.com/) infrastructure on [SauceDemo.com](https://www.saucedemo.com/).
+
 # Getting Started
 1. Clone the repository fro github `[https://github.com/caseycling/pytest-bdd-appium-demo.git`
 2. Go to into the repository `cd pytest-bdd-appium-demo`
@@ -37,7 +40,7 @@ To install individual packages needed simply use:
 
 `pip install pytest-xdist` or `pip install pytest`
 
-# Intructions on setting up environment variables
+# Instructions on setting up environment variables
 If you have these saved as "environment variables" on your local machine, utilizing the logic in our project will work. If not, you can create a .env file and store them there also.
 
 `$SAUCE_USERNAME`
