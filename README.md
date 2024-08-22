@@ -70,8 +70,7 @@ Save the file and run source ~/.bashrc (or the appropriate file) to apply the ch
 ## Method 2: Using a .env File
 Create a .env file:
 
-In your project directory, create a file named .env.
-Add the environment variables:
+In your project directory, create a file named `.env`
 
 Open the .env file and add the following lines:
 
@@ -79,7 +78,7 @@ Open the .env file and add the following lines:
 SAUCE_USERNAME=your_sauce_username
 SAUCE_ACCESS_KEY=your_sauce_access_key
 ```
-Load the .env file:
+Load/reload the .env file.
 
 Install the python-dotenv package if it's not already installed:
 
@@ -97,7 +96,7 @@ sauce_access_key = os.getenv('SAUCE_ACCESS_KEY')
 ```
 This method ensures that sensitive information is kept separate from your code and is easier to manage across different environments.
 
-Tips:
+--Tips:
 Ensure your .env file is added to .gitignore to prevent it from being committed to version control.
 Use environment variables to keep sensitive information secure and configurable without modifying your codebase.
 
