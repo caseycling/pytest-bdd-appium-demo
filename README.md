@@ -1,4 +1,4 @@
-## Getting Started
+# Getting Started
 1. Clone the repository fro github `[https://github.com/caseycling/pytest-bdd-appium-demo.git`
 2. Go to into the repository `cd pytest-bdd-appium-demo`
 
@@ -6,7 +6,7 @@
 
 Ensure you have Python 3.12 installed. You can download it from the [official Python website](https://www.python.org/downloads/)
 
-## Create a virtual environment:
+# Create a virtual environment:
 
 `python -m venv venv`
 
@@ -37,7 +37,7 @@ To install individual packages needed simply use:
 
 `pip install pytest-xdist` or `pip install pytest`
 
-## Intructions on setting up environment variables
+# Intructions on setting up environment variables
 If you have these saved as "environment variables" on your local machine, utilizing the logic in our project will work. If not, you can create a .env file and store them there also.
 
 `$SAUCE_USERNAME`
@@ -100,7 +100,7 @@ This method ensures that sensitive information is kept separate from your code a
 Ensure your .env file is added to .gitignore to prevent it from being committed to version control.
 Use environment variables to keep sensitive information secure and configurable without modifying your codebase.
 
-## Running the Tests
+# Running the Tests
 
 You can start individual non parallel tests by using .ex `pipenv run pytest tests/mobile-web/test_add_item_to_cart.py`
 
@@ -115,7 +115,7 @@ native-app-iOs = "pipenv run pytest -n3 tests/native-app/iOS"
 
 
 
-## Sauce Documentation & Resources 📚
+# Sauce Documentation & Resources 📚
 - `User Credentials Environment Variables` Using Sauce user credential environment variables in your app [User Cred Environment Variables](https://docs.saucelabs.com/secure-connections/sauce-connect/setup-configuration/environment-variables/#user-credentials-environment-variables)
 - `Platform Configurator` Tool developed by Sauce Labs to help you correctly configure test capabilities for your Appium and Selenium tests. [Platform Configurator](https://saucelabs.com/products/platform-configurator#/)
 - `SauceLabs Blog` Test automation tutorials, guides, learnings, and insights [Sauce Blog](https://saucelabs.com/resources/blog)
