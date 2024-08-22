@@ -4,6 +4,7 @@ This is an example repo of mobile-web tests and native mobile app tests for Andr
 # Getting Started
 1. Clone the repository from github `[https://github.com/caseycling/pytest-bdd-appium-demo.git`
 2. Go to into the repository `cd pytest-bdd-appium-demo`
+3. `pipenv install`
 
 ## Installation:
 
