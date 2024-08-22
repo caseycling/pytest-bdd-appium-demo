@@ -43,7 +43,7 @@ If you have these saved as "environment variables" on your local machine, utiliz
 `$SAUCE_USERNAME`
 `$SAUCE_ACCESS_KEY`
 
-##Method 1: Setting Environment Variables Directly
+## Method 1: Setting Environment Variables Directly
 On Windows:
 
 Open the Start menu and search for "Environment Variables."
