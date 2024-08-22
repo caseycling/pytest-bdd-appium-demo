@@ -51,7 +51,7 @@ After the test execution, the driver session is terminated (driver.quit()), ensu
 
 For more information on how to customize these settings to accomodate your usecase, please reference the platform configurator documenation listed at the bottom of this doc.
 
-### Parallel Execution with `pytest-bdd`
+## Parallel Execution with `pytest-bdd`
 
 - **Pytest-Xdist Integration**: `pytest-bdd` works with `pytest-xdist` to run tests in parallel. The `pytest-xdist` plugin distributes test execution across multiple CPUs or machines, improving performance for large test suites.
 
