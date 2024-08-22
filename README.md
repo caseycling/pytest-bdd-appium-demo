@@ -34,7 +34,7 @@ The conftest.py file in this project is configured to manage the setup and teard
 
 **1. Mobile Web Driver**
 
-The mobile_web_driver fixture is responsible for setting up the WebDriver session for running mobile web tests. It uses Selenium's webdriver.Remote to interact with a mobile web browser hosted on Sauce Labs.
+The mobile_web_driver fixture sets up the WebDriver session for running mobile web tests. It uses Selenium's webdriver.Remote to interact with a mobile web browser hosted on Sauce Labs.
 
 **2. Android RDC Driver**
 
@@ -50,14 +50,6 @@ Each driver fixture yields a WebDriver session, allowing the test to interact wi
 After the test execution, the driver session is terminated (driver.quit()), ensuring that resources are released properly. 
 
 For more information on how to customize these settings to accomodate your usecase, please reference the platform configurator documenation listed at the bottom of this doc.
-
-### How `pytest-bdd` Runs in Parallel
-
-1. **Feature Files**: These files describe scenarios and steps that need to be tested.
-
-2. **Step Definitions**: Python functions that implement the steps described in the feature files. These are usually placed in the corresponding test directories under `tests/`, such as `mobile-web/`, `native-app/android/`, and `native-app/iOS/`.
-
-3. **Test Files**: These files include the test logic and use the step definitions to execute the scenarios. They are found in the same directories as step definitions or in a subdirectory as needed.
 
 ### Parallel Execution with `pytest-bdd`
 
