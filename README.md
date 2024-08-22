@@ -1,6 +1,6 @@
 ## Getting Started
-1. Clone the repository `[https://github.com/caseycling/pytest-bdd-appium-demo.git]`
-2. Go to the repository `pytest-bdd-appium-demo`
+1. Clone the repository fro github `[https://github.com/caseycling/pytest-bdd-appium-demo.git`
+2. Go to into the repository `cd pytest-bdd-appium-demo`
 
 ## Installation:
 
@@ -16,7 +16,20 @@ On Windows:
 On macOS/Linux:
 `source venv/bin/activate`
 
+## Install the required packages:
 
+Create a requirements.txt file with the following content:
+
+`python_version==3.12
+pytest-bdd
+pytest
+appium-python-client==4.1.0
+selenium
+pytest-xdist`
+
+Then, install the dependencies using:
+
+`pip install -r requirements.txt`
 
 
 ## Sauce Documentation & Resources 📚
