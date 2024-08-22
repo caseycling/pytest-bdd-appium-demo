@@ -11,10 +11,12 @@ This is an example repo of mobile-web tests and native mobile app tests for Andr
 Ensure you have Python 3.12 installed. You can download it from the [official Python website](https://www.python.org/downloads/)
 
 ## Instructions on setting up environment variables
-If you have these saved as "environment variables" on your local machine, utilizing the logic in our project will work. If not, you can create a .env file and store them there also.
+If you have these saved as "environment variables" on your local machine, utilizing the logic in our project will work. Alternatively, you can create a .env file and store them there:
 
-`$SAUCE_USERNAME`
-`$SAUCE_ACCESS_KEY`
+```
+SAUCE_USERNAME=your_sauce_username
+SAUCE_ACCESS_KEY=your_sauce_access_key
+````
 
 # Directory Structure
 
