@@ -31,15 +31,19 @@ If you have these saved as "environment variables" on your local machine, utiliz
 The conftest.py file in this project is configured to manage the setup and teardown of WebDriver sessions for different platforms, ensuring that the tests run smoothly on Sauce Labs infrastructure. Here's an overview of the drivers set up:
 
 **1. Mobile Web Driver**
+
 The mobile_web_driver fixture is responsible for setting up the WebDriver session for running mobile web tests. It uses Selenium's webdriver.Remote to interact with a mobile web browser hosted on Sauce Labs.
 
 **2. Android RDC Driver**
+
 The android_rdc_driver fixture sets up a session for running tests on native Android applications using Appium. It leverages Appium's UiAutomator2Options to interact with the Android device.
 
 **3. iOS RDC Driver**
+
 The ios_driver fixture manages the setup for running tests on native iOS applications. It uses Appium's AppiumOptions to configure the session.
 
 **General workflow**
+
 Each driver fixture yields a WebDriver session, allowing the test to interact with the respective platform. 
 After the test execution, the driver session is terminated (driver.quit()), ensuring that resources are released properly. 
 
