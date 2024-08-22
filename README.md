@@ -20,12 +20,12 @@ On macOS/Linux:
 
 Create a requirements.txt file with the following content:
 
-`python_version==3.12
-pytest-bdd
-pytest
-appium-python-client==4.1.0
-selenium
-pytest-xdist`
+`python_version==3.12`
+`pytest-bdd`
+`pytest`
+`appium-python-client==4.1.0`
+`selenium`
+`pytest-xdist`
 
 Then, install the dependencies using:
 
