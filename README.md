@@ -42,7 +42,7 @@ The android_rdc_driver fixture sets up a session for running tests on native And
 
 The ios_driver fixture manages the setup for running tests on native iOS applications. It uses Appium's AppiumOptions to configure the session.
 
-**General workflow**
+**General workflow:**
 
 Each driver fixture yields a WebDriver session, allowing the test to interact with the respective platform. 
 After the test execution, the driver session is terminated (driver.quit()), ensuring that resources are released properly. 
